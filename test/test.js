@@ -1,1 +1,1 @@
-require(['./unit/prefab'], function(){});
+require(['./unit/prefab'], function() {});

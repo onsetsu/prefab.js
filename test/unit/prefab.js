@@ -36,4 +36,14 @@ define(['./../../src/prefab'], function(Prefab){
     actualParent.parentProperty = "bar";
     assert.equal(actualObject.parentProperty, "bar", "property not changed");
   });
+
+  QUnit.test('Overwrite instancate', function(assert) {
+    var singleton = Prefab.instanciate({
+      instanciate: function() {
+        return this;
+      }
+    });
+
+    assert.equal(singleton, singleton.instanciate(), 'instanciate not augmented');
+  });
 });
