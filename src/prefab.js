@@ -1,5 +1,4 @@
-var Prefab = (function() {
-  // TODO: use .create-method directly
+define(function() {
   function instanciate() {
     var object = Object.create(this);
     return object;
@@ -9,4 +8,4 @@ var Prefab = (function() {
   Prefab.instanciate = instanciate;
 
   return Prefab;
-})();
+});
